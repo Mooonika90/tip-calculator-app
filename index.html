@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/159348a646.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+</head>
+
+<body>
+
+  <h1 class="title">spli
+    <br>
+    tter
+  </h1>
+
+  <div class="container">
+    <div class="calculation-box">
+      <div class="bill-box">
+        <p class="bill">Bill</p>
+
+        <div class="bill-wrapper">
+          <input class="bill-input" placeholder="0.00" type="number">
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+      </div>
+      <div class="tip-box">
+        <p class="tip">Select Tip %</p>
+        <div class="tips-level">
+          <input type="button" class="btn first" value="5%">
+          <input type="button" class="btn second" value="10%">
+          <input type="button" class="btn third" value="15%">
+          <input type="button" class="btn fourth" value="25%">
+          <input type="button" class="btn fifth" value="50%">
+          <input type="number" class="btn custom" placeholder="Custom">
+
+        </div>
+      </div>
+
+      <div class="people-box">
+        <div class="people-between">
+          <p class="people">Number of people</p>
+          <p class="error"></p>
+        </div>
+        <div class="people-wrapper">
+          <input type="number" placeholder="0.00" class="people-input">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary-box">
+      <div class="row">
+        <div class="tip-amount">
+          <p class="text-amount">Tip Amount</p>
+          <span class="perperson">/ person</span>
+        </div>
+        <div class="amount">$0.00</div>
+      </div>
+      <div class="row">
+        <div class="tip-total">
+          <p class="text-total">Total</p>
+          <span class="perperson">/ person</span>
+        </div>
+        <div class="amount-total">$0.00</div>
+      </div>
+
+      <button class="reset">reset</button>
+    </div>
+
+
+
+  </div>
+
+
+  <div class="footer">
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor </a><span
+        class="year"></span>.
+      Coded by <a href="https://www.instagram.com/monikajaroszewicz_stylistka/" target="_blank">MJ</a>
+    </p>
+  </div>
+</body>
+
+</html>

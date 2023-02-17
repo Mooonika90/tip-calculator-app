@@ -1,0 +1,236 @@
+:root {
+	/* primary */
+	--strong-cyan: hsl(172, 67%, 45%);
+
+	/* neutral */
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--dark-grayish-cyan: hsl(186, 14%, 43%);
+	--grayish-cyan: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--very-light-grayish-cyan: hsl(189, 41%, 97%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--light-grayish-cyan);
+	font-family: 'Space Mono', monospace;
+}
+.title {
+	margin: 3rem auto 2rem;
+	text-align: center;
+	color: var(--very-dark-cyan);
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	text-align: center;
+	background-color: var(--white);
+	border-radius: 1.5rem 1.5rem 0 0;
+	width: 100%;
+	padding: 1rem 2rem 1.5rem;
+}
+
+input[type='text'],
+input[type='number'] {
+	width: 100%;
+	background-color: var(--very-light-grayish-cyan);
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.3rem;
+	text-align: right;
+}
+.people-wrapper,
+.bill-wrapper {
+	position: relative;
+}
+.fa-solid {
+	position: absolute;
+	left: 4%;
+	top: 50%;
+	transform: translate(4%, -50%);
+	color: var(--grayish-cyan);
+}
+
+input {
+	font-size: 1.5rem;
+	font-family: 'Space Mono', monospace;
+}
+
+.btn {
+	border-radius: 0.3rem;
+	border: none;
+	cursor: pointer;
+	transition: color 0.5s, background-color 0.5s;
+}
+
+input[type='button'] {
+	padding: 0.2rem 0;
+}
+input[type='button']:not(.custom) {
+	background-color: var(--very-dark-cyan);
+	color: var(--white);
+}
+
+.tip-box {
+	margin: 2rem 0;
+}
+.custom {
+	text-align: right;
+	background-color: var(--very-light-grayish-cyan);
+	color: var(--very-dark-cyan);
+}
+
+.btn:hover {
+	background-color: var(--strong-cyan) !important;
+	color: var(--very-dark-cyan) !important;
+}
+.tip,
+.bill {
+	margin: 1rem 0 0.3rem;
+}
+
+.people,
+.tip,
+.bill {
+	text-align: left;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+
+.tips-level {
+	margin-top: 0.8rem;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+.row {
+	margin-bottom: 0.5rem;
+}
+
+.summary-box {
+	margin-top: 2rem;
+	background-color: var(--very-dark-cyan);
+	border-radius: 0.938rem;
+	padding: 2rem 2rem 1rem;
+}
+
+.amount,
+.amount-total {
+	font-size: 2rem;
+	color: var(--strong-cyan);
+	font-weight: 700;
+}
+
+.text-total,
+.text-amount {
+	color: var(--white);
+	text-align: left;
+}
+
+.perperson {
+	color: var(--light-grayish-cyan);
+	text-align: left;
+}
+
+.reset {
+	margin-top: 1rem;
+	font-family: 'Space Mono', monospace;
+	width: 100%;
+	text-transform: uppercase;
+	border: none;
+	padding: 0.5rem;
+	font-size: 1.3rem;
+	border-radius: 0.3rem;
+	font-weight: 700;
+	color: var(--very-dark-cyan);
+	background-color: var(--strong-cyan);
+	transition: background-color 0.5s;
+	cursor: pointer;
+}
+
+.reset:hover {
+	background-color: var(--light-grayish-cyan);
+}
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.people-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.error {
+	color: red;
+	text-align: right;
+}
+
+.error-input,
+.error-input:focus {
+	outline: 2px solid red;
+	color: red;
+	background-color: rgba(255, 0, 0, 0.2);
+}
+.footer {
+	text-align: center;
+	margin-top: 1rem;
+}
+a {
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--very-dark-cyan);
+}
+
+@media (min-width: 768px) {
+	.title {
+		margin-top: 9rem;
+	}
+	.container {
+		max-width: 57.5rem;
+		border-radius: 1.5rem;
+		margin: auto;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		justify-content: center;
+		gap: 3rem;
+		padding-bottom: 2rem;
+	}
+	.tips-level {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
+	}
+	.reset {
+		margin-top: 6rem;
+	}
+	.custom {
+		font-size: 1.4rem;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+	}
+	.summary-box {
+		padding: 2rem;
+	}
+	.row {
+		margin-bottom: 2rem;
+	}
+	.amount,
+	.amount-total {
+		font-size: 3rem;
+	}
+}
